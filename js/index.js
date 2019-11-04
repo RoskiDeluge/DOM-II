@@ -34,7 +34,18 @@ logo.addEventListener("mouseup", () => {
     logo.style.fontSize = "5rem"
 })
 
+const imgs = document.querySelectorAll('img');
 
+imgs.forEach((i) => {
+    i.addEventListener("keydown", () => {
+        i.style.display = "none";
+    })
+})
+
+
+// imgs.addEventListener("keydown", () => {
+//     imgs.style.display = "none";
+// })
 
 
 
