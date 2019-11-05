@@ -35,6 +35,7 @@ logo.addEventListener("mouseup", () => {
 })
 
 const imgs = document.querySelectorAll('img');
+// console.log(imgs);
 
 imgs.forEach((i) => {
     i.addEventListener("keydown", () => {
@@ -42,10 +43,31 @@ imgs.forEach((i) => {
     })
 })
 
+const textContent = document.querySelector('.text-content');
+textContent.addEventListener("click", () => {
+    textContent.style.backgroundColor = "blue";
+    textContent.style.borderRadius = "1rem";
+    textContent.style.padding = "2rem 2rem";
+})
 
-// imgs.addEventListener("keydown", () => {
-//     imgs.style.display = "none";
-// })
+const contentImg = document.querySelector('.content-destination img');
+window.addEventListener('resize', () => {
+    contentImg.src = "https://images.unsplash.com/photo-1572977082357-779e44868cb4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+})
+
+const bodyBlank = document.querySelector('body');
+window.addEventListener('load', () => {
+    bodyBlank.style.backgroundColor = "lightblue";
+})
+
+const btnFocus = document.querySelector('.btn');
+window.addEventListener("focus", () => {
+    btnFocus.style.backgroundColor = "pink";
+})
+
+
+
+
 
 
 
