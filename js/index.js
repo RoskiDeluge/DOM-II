@@ -65,6 +65,33 @@ window.addEventListener("focus", () => {
     btnFocus.style.backgroundColor = "pink";
 })
 
+// stop propagation
+
+const contentBg = document.querySelector('.content-pick');
+contentBg.addEventListener("click", () => {
+    contentBg.style.backgroundColor = "lightgreen";
+})
+
+const destBg = document.querySelector('.destination');
+destBg.addEventListener("click", (event) => {
+    destBg.style.backgroundColor = "turquoise";
+    destBg.style.padding = "1rem 1rem";
+    destBg.style.borderRadius = "1rem";
+    event.stopPropagation();
+})
+
+// prevent default
+
+const stopRefresh = document.querySelectorAll('.nav-link');
+stopRefresh.forEach((link) => {
+    link.addEventListener("click", (event) => {
+        console.log('clicked link')
+        event.preventDefault();
+    })
+})
+
+
+
 
 
 
