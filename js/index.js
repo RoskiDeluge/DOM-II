@@ -38,7 +38,7 @@ const imgs = document.querySelectorAll('img');
 // console.log(imgs);
 
 imgs.forEach((i) => {
-    i.addEventListener("keydown", () => {
+    window.addEventListener("keydown", () => {
         i.style.display = "none";
     })
 })
